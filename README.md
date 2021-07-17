@@ -1,7 +1,7 @@
 # Snippets
-A collection of useful (or useless) snippets for lua and GLua
+A collection of useful (or useless) snippets for lua and GLua.
 All attached scripts are developed by me and are distributed under the MIT license.
-Cheapblur, Netvar, Task scripts are part of ASGLib for Garry's mod
+Cheapblur, Netvar, Task scripts are part of ASGLib for Garry's mod.
 I don't see the need for supporting documentation. If you think that any of these scripts are necessary for you, you will understand how it works.
 
 # cheapblur.lua

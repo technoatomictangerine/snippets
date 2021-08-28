@@ -16,3 +16,5 @@ Library that providing customizable and fast network variables for tables and en
 Translations of Ken Perlin's Simplex Noise to Lua (Basicaly used for generating landscape in Garry's Mod, but the lighting of the meshes was completely unusable)
 # task.lua
 Simple module thats allow you to delay some not-so-needed actions in Garry's Mod. (Used for lazy initialization, sequential execution of heavy methods, and avoids me from throttling)
+# urlmaterial.lua
+Simple snippet thats provides you to load web images as material without precache it to hard drive.

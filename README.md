@@ -17,4 +17,6 @@ Translations of Ken Perlin's Simplex Noise to Lua (Basicaly used for generating 
 # task.lua
 Simple module thats allow you to delay some not-so-needed actions in Garry's Mod. (Used for lazy initialization, sequential execution of heavy methods, and avoids me from throttling)
 # urlmaterial.lua
-Simple snippet thats provides you to load web images as material without precache it to hard drive.
+Simple snippet thats provides you to load web images as material without precache it to hard drive in Garry's Mod.
+# pdata.lua
+sql extension and pdata replacement for Garry's Mod.

@@ -73,7 +73,7 @@ function meta:GetPData(name, def)
 	if name == nil then return def end
 	DoCommit()
 
-	local sid = self.SID
+	local sid = self:SteamID64()
 	local val = queryval(format('SELECT %s FROM "asgpdata" WHERE "sid" = "%s" LIMIT 1;', name, sid))
 	if val == 'NULL' or val == nil then return def end
 	return val
@@ -89,13 +89,13 @@ function meta:SetPData(name, val)
 		timerSimple(commit_rate, DoCommit)
 	end
 
-	local sid = self.SID
+	local sid = self:SteamID64()
 	return query(
 		format('UPDATE "asgpdata" SET "%s" = %s WHERE "sid" = "%s";', name, escv(val), sid))
 end
 
 function meta:SetupPData()
-	local sid = self.SID
+	local sid = self:SteamID64()
 	query(
 		format('INSERT OR IGNORE INTO asgpdata(sid) VALUES(%s);', sid))
 end
@@ -118,3 +118,16 @@ sql.CreatePlayerVar = CreateVar
 sql.EndCommit = DoCommit
 sql.GetPData = GetPData
 sql.SetPData = SetPData
+
+sql.m_strError = nil
+setmetatable(sql, {__newindex = function(_, k, v)
+	if k == 'm_strError' and v then
+		ErrorNoHalt('[SQL ERROR] ', v, '\n')
+
+		for i = 2, 8 do
+			local info = debug.getinfo(i, 'Sfl')
+			if info == nil then break end
+			ErrorNoHalt(string.rep(' ', i + 2), i - 1, '. ', info.short_src, ':', info.currentline, '\n')
+		end
+	end
+end})

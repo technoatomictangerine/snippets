@@ -75,7 +75,7 @@ local mat_table = {
 	['$softedges'] = 1,
 	['$edgesoftnessstart'] = .45,
 	['$edgesoftnessend'] = .3,
-	['$scaleedgesoftnessbasedonscreenres'] = 1}
+	['$scaleedgesoftnessbasedonscreenres'] = 1
 }
 
 function surface.GetURL(url, w, h)

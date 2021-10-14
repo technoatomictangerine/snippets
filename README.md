@@ -23,4 +23,4 @@ sql extension and pdata replacement for Garry's Mod.
 # navmesh.lua
 Implementation of the navigation POI and A* pathfinding algorithm for Garry's Mod
 # lang.lua
-The simplest multilingual module
+The simplest multilingual module for Garry's mod

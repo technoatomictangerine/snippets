@@ -9,8 +9,8 @@ local Create, GetTable do
 	local Run, co, running, start
 	local pcall, ErrorNoHalt = pcall, ErrorNoHalt
 	local index, list, names = 0, {}, {}
-	local rate = 1 / 300
-	local wait = 1 / 16
+	local rate = 1 / 300 --This is the allowable time for the task to be completed
+	local wait = 1 / 16 --This is the time between executions
 
 	function GetTable() return list, index end
 

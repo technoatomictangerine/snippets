@@ -22,3 +22,5 @@ Simple snippet thats provides you to load web images as material without precach
 sql extension and pdata replacement for Garry's Mod.
 # navmesh.lua
 Implementation of the navigation POI and A* pathfinding algorithm for Garry's Mod
+# lang.lua
+The simplest multilingual module

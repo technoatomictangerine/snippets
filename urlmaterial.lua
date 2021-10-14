@@ -1,7 +1,7 @@
 local QueuedLoop
 local GetRenderTargetEx = GetRenderTargetEx
 local CreateMaterial = CreateMaterial
-local filter_pass = 4
+local filter_pass = 4	--Number of filter passes. Don't put a value higher than 8.
 local empty = table.Empty
 local hookRemove = hook.Remove
 local hook = hook.Add
@@ -75,7 +75,13 @@ local mat_table = {
 	['$softedges'] = 1,
 	['$edgesoftnessstart'] = .45,
 	['$edgesoftnessend'] = .3,
-	['$scaleedgesoftnessbasedonscreenres'] = 1}
+	['$scaleedgesoftnessbasedonscreenres'] = 1,
+	--Uncomment the lines below if you plan to use materials only for the user interface for optimization reasons
+	--['$no_fullbright'] = 1,
+	--['$writez'] = 0,
+	--['$nowritez'] = 1,
+	--['$nodecal'] = 1,
+	--['$nofog'] = 1
 }
 
 function surface.GetURL(url, w, h)

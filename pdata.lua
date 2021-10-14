@@ -112,9 +112,9 @@ do
 	end
 end
 
-function sql.Query(query)
+function sql.Query(q)
 	DoCommit()
-	return query(query)
+	return query(q)
 end
 
 hook.Add('ShutDown', 'SQLCommit', DoCommit)

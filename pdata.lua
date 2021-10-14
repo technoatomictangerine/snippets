@@ -6,7 +6,7 @@ local format = string.format
 local query = sql.Query
 local queryval = sql.QueryValue
 local commit = sql.Commit
-local commit_rate = 15
+local commit_rate = 30
 local timerSimple = timer.Simple
 local esc, escv
 
@@ -73,7 +73,7 @@ function meta:GetPData(name, def)
 	if name == nil then return def end
 	DoCommit()
 
-	local sid = self:SteamID64()
+	local sid = self.SID
 	local val = queryval(format('SELECT %s FROM "asgpdata" WHERE "sid" = "%s" LIMIT 1;', name, sid))
 	if val == 'NULL' or val == nil then return def end
 	return val
@@ -89,13 +89,13 @@ function meta:SetPData(name, val)
 		timerSimple(commit_rate, DoCommit)
 	end
 
-	local sid = self:SteamID64()
+	local sid = self.SID
 	return query(
 		format('UPDATE "asgpdata" SET "%s" = %s WHERE "sid" = "%s";', name, escv(val), sid))
 end
 
 function meta:SetupPData()
-	local sid = self:SteamID64()
+	local sid = self.SID
 	query(
 		format('INSERT OR IGNORE INTO asgpdata(sid) VALUES(%s);', sid))
 end
@@ -110,6 +110,11 @@ do
 		local v = esc(name)
 		vars[name] = v
 	end
+end
+
+function sql.Query(query)
+	DoCommit()
+	return query(query)
 end
 
 hook.Add('ShutDown', 'SQLCommit', DoCommit)

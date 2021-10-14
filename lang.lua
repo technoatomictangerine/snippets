@@ -1,4 +1,5 @@
 local locale = {}
+local Panel = FindMetaTable('Panel')
 local code = GetConVarString('gmod_language')
 local gsub = string.gsub
 

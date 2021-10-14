@@ -46,11 +46,11 @@ end
 
 local function GetPData(sid, name, v)
 	name = vars[name]
-	if name == nil then return def end
+	if name == nil then return v end
 	DoCommit()
 
 	local val = queryval(format('SELECT %s FROM "asgpdata" WHERE "sid" = "%s" LIMIT 1;', name, sid))
-	if val == 'NULL' or val == nil then return def end
+	if val == 'NULL' or val == nil then return v end
 	return val
 end
 

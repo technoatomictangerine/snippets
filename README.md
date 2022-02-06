@@ -8,8 +8,6 @@ I don't see the need for supporting documentation. If you think that any of thes
 This is a snippet to provide you with a cheap blurring method for your interfaces in Garry's Mod.
 # cipher.lua
 Implementation of encryption based on custom random number function
-# netstream.lua
-A streaming extension for the net library in Garry's mod.
 # netvar.lua
 Library that providing customizable and fast network variables for tables and entities in Garry's Mod.
 # simplexnoise.lua

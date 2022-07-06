@@ -17,7 +17,7 @@ Simple module thats allow you to delay some not-so-needed actions in Garry's Mod
 # urlmaterial.lua
 Simple snippet thats provides you to load web images as material without precache it to hard drive in Garry's Mod.
 # pdata.lua
-sql extension and pdata replacement for Garry's Mod.
+sql extension and pdata replacement for custom gamemodes in Garry's Mod.
 # navmesh.lua
 Implementation of the navigation POI and A* pathfinding algorithm for Garry's Mod
 # lang.lua

@@ -2,7 +2,7 @@
 A collection of useful (or useless) snippets for lua and GLua.
 All attached scripts are developed by me and are distributed under the MIT license.
 Cheapblur, Netvar, Task, Navmesh, PData scripts are part of ASGLib for Garry's mod.
-I don't see the need for supporting documentation. If you think that any of these scripts are necessary for you, you will understand how it works.
+Documentation is largely identical to Crime 2.0 and is available here https://scuroin.gitbook.io/krume-20/
 
 # cheapblur.lua
 This is a snippet to provide you with a cheap blurring method for your interfaces in Garry's Mod.

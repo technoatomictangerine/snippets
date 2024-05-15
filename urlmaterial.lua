@@ -91,7 +91,7 @@ function surface.GetURL(url, w, h)
 		w or 256, h or 256,
 		0, 1, 16, 0, 0)
 	mat:SetTexture('$basetexture', rt)
-	qtex[url] = rt
+	qtex[url] = mat
 
 	qlen = qlen + 1
 	qurl[qlen] = url
